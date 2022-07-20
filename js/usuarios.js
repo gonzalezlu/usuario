@@ -16,6 +16,7 @@ export let user = [
 let postion = 0;
 let user_root = document.querySelector ('#root');
 
+
 document.getElementById('usuario').innerHTML = user[postion][1];
 
 const mover_derecha = () => { 
@@ -38,4 +39,14 @@ document.getElementById('boton-derecha').addEventListener('click', mover_derecha
 
 document.getElementById('boton-izquierda').addEventListener('click', mover_izquierda);
 
-user_root.innerHTML = '<h1>' + user_info[0].name + '</h1>';
+
+function mostrar_usuario(){
+    user_root.innerHTML = '<h1>' + user_info[postion].nikname + '</h1>' + 
+    '<h1>' + user_info[postion].name + '</h1>' +
+    '<h1>' + user_info[postion].adress + '</h1>' + 
+    '<h1>' + user_info[postion].email + '</h1>' + 
+    '<h1>' + user_info[postion].phone + '</h1>';
+}
+
+
+document.getElementById('ver-contenido').addEventListener('click', mostrar_usuario);
