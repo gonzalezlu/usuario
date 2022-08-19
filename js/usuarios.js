@@ -1,4 +1,3 @@
-import { user_info } from "./main.js";
 
 
 export let user = [
@@ -33,6 +32,11 @@ const mover_izquierda = () => {
     }
 
     document.getElementById('usuario').innerHTML = user[postion][1];
+}
+
+
+const reset = () => {
+    
 }
 
 document.getElementById('boton-derecha').addEventListener('click', mover_derecha);
